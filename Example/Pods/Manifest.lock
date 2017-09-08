@@ -1,0 +1,16 @@
+PODS:
+  - Satuh (0.1.0)
+
+DEPENDENCIES:
+  - Satuh (from `../`)
+
+EXTERNAL SOURCES:
+  Satuh:
+    :path: ../
+
+SPEC CHECKSUMS:
+  Satuh: 34d514c22b0e93f13ebc05744dd36275621db9c1
+
+PODFILE CHECKSUM: dc8d1cfb7ae4b6a6a8bd3c55c71e86e349c5d8e0
+
+COCOAPODS: 1.2.1
