@@ -14,7 +14,6 @@
 		50EF6C14EC1B0C05A87D6E5C70F0BD45 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		76EB5E559C22624277BE1989C1752471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		86201630AED86F767F50F816071C370D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9BFD04EE28FAE61D799DB09476B2FAF6 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAB494680908B6356974DA16F26D53AE /* ReplaceMe.swift */; };
 		A1745AB6432DB3BC2DF7B57CC0DCB06C /* Pods-Satuh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 474FE7BCA32ED7FCF596D8D7BC18CAB5 /* Pods-Satuh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5ADEDCA10CA67DC4CBD32378C3EA5A7 /* Pods-Satuh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 844C357119DCF01B4F7E563B2272DA45 /* Pods-Satuh_Example-dummy.m */; };
 /* End PBXBuildFile section */
@@ -34,7 +33,7 @@
 		1564D9555AABFD7033FF65FC527C2582 /* Pods-Satuh_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Satuh_Example-frameworks.sh"; sourceTree = "<group>"; };
 		174845CD79F6475E95B04BFD6F34AD13 /* Satuh-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Satuh-umbrella.h"; sourceTree = "<group>"; };
 		1B93D52E228486293E366901335B07DF /* Pods-Satuh_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Satuh_Example-umbrella.h"; sourceTree = "<group>"; };
-		1DE2A2760277B08997AAD4700128F41E /* Satuh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Satuh.framework; path = Satuh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DE2A2760277B08997AAD4700128F41E /* Satuh.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Satuh.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ADD33E444E99517D2021EA3BC54BFB2 /* Satuh-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Satuh-prefix.pch"; sourceTree = "<group>"; };
 		38A04DAC7F291551BEACC0BAF4819717 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		469B305A07E157E2C834D49E98773867 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,22 +42,21 @@
 		595CB8CE010BABD51E02C14F9C41E71A /* Pods-Satuh_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Satuh_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		60E3185FFB4CA3087CEDAC6D7892CE5C /* Satuh-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Satuh-dummy.m"; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		67F5E7D8ED1EEA29EA8FC72C9BDCA234 /* Pods_Satuh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Satuh_Tests.framework; path = "Pods-Satuh_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		67F5E7D8ED1EEA29EA8FC72C9BDCA234 /* Pods_Satuh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Satuh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7363408C4C8B64D19B9312974F359E4F /* Pods-Satuh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satuh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		7652986B82C54CBDB195930BC0DEABA1 /* Satuh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Satuh.modulemap; sourceTree = "<group>"; };
-		76C3D6A373D30571913FB3CB4E566B02 /* Pods_Satuh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Satuh_Example.framework; path = "Pods-Satuh_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7652986B82C54CBDB195930BC0DEABA1 /* Satuh.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Satuh.modulemap; sourceTree = "<group>"; };
+		76C3D6A373D30571913FB3CB4E566B02 /* Pods_Satuh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Satuh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BD03DA92534E30DE6FEBDE894548C48 /* Pods-Satuh_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Satuh_Tests-resources.sh"; sourceTree = "<group>"; };
 		80246F149F1218029BBE2AA454680801 /* Pods-Satuh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satuh_Example.release.xcconfig"; sourceTree = "<group>"; };
 		844C357119DCF01B4F7E563B2272DA45 /* Pods-Satuh_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Satuh_Example-dummy.m"; sourceTree = "<group>"; };
 		90A6152339C1CCE0A0FB38D34F38A9C2 /* Pods-Satuh_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Satuh_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		96AFB67F47FC04749A876BCDAFE73768 /* Pods-Satuh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Satuh_Example.modulemap"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96AFB67F47FC04749A876BCDAFE73768 /* Pods-Satuh_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Satuh_Example.modulemap"; sourceTree = "<group>"; };
 		99DFED1C0379DE17804263C2B1EB6AAC /* Pods-Satuh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satuh_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A512815589FE4FCAB764AEAA21BC15EB /* Pods-Satuh_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Satuh_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA8865328B57CBC4943F03F20F299C40 /* Pods-Satuh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Satuh_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		C36B095E68A80C6301467B53083C6096 /* Pods-Satuh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Satuh_Tests-dummy.m"; sourceTree = "<group>"; };
-		C61E4C83CC30C81917249E97CE2D51DE /* Pods-Satuh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Satuh_Tests.modulemap"; sourceTree = "<group>"; };
-		CAB494680908B6356974DA16F26D53AE /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
+		C61E4C83CC30C81917249E97CE2D51DE /* Pods-Satuh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Satuh_Tests.modulemap"; sourceTree = "<group>"; };
 		D9D388DE459B9E00742A9752DB5AD39F /* Pods-Satuh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Satuh_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		FA84CA53CA71126590F430FF90C4E32A /* Pods-Satuh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Satuh_Example-resources.sh"; sourceTree = "<group>"; };
 		FB2B30A9141580C628EDF7FB65F3E5F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			children = (
 				85A7EB3027F4056B3E1D63CFDCE1F1A9 /* Classes */,
 			);
-			name = Satuh;
 			path = Satuh;
 			sourceTree = "<group>";
 		};
@@ -155,9 +152,7 @@
 		85A7EB3027F4056B3E1D63CFDCE1F1A9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				CAB494680908B6356974DA16F26D53AE /* ReplaceMe.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -355,7 +350,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9BFD04EE28FAE61D799DB09476B2FAF6 /* ReplaceMe.swift in Sources */,
 				12EDF19FC9A892272C167061691B63E4 /* Satuh-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
