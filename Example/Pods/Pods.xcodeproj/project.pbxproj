@@ -15,6 +15,7 @@
 		76EB5E559C22624277BE1989C1752471 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		86201630AED86F767F50F816071C370D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 		A1745AB6432DB3BC2DF7B57CC0DCB06C /* Pods-Satuh_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 474FE7BCA32ED7FCF596D8D7BC18CAB5 /* Pods-Satuh_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF1752B41F6292EB00B28828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1752B31F6292EB00B28828 /* ViewController.swift */; };
 		E5ADEDCA10CA67DC4CBD32378C3EA5A7 /* Pods-Satuh_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 844C357119DCF01B4F7E563B2272DA45 /* Pods-Satuh_Example-dummy.m */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		C36B095E68A80C6301467B53083C6096 /* Pods-Satuh_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Satuh_Tests-dummy.m"; sourceTree = "<group>"; };
 		C61E4C83CC30C81917249E97CE2D51DE /* Pods-Satuh_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Satuh_Tests.modulemap"; sourceTree = "<group>"; };
 		D9D388DE459B9E00742A9752DB5AD39F /* Pods-Satuh_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Satuh_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		DF1752B31F6292EB00B28828 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FA84CA53CA71126590F430FF90C4E32A /* Pods-Satuh_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Satuh_Example-resources.sh"; sourceTree = "<group>"; };
 		FB2B30A9141580C628EDF7FB65F3E5F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +154,7 @@
 		85A7EB3027F4056B3E1D63CFDCE1F1A9 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				DF1752B21F6292C600B28828 /* Try Controller */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -217,6 +220,14 @@
 			);
 			name = Satuh;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		DF1752B21F6292C600B28828 /* Try Controller */ = {
+			isa = PBXGroup;
+			children = (
+				DF1752B31F6292EB00B28828 /* ViewController.swift */,
+			);
+			name = "Try Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +320,11 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					5956E2C913A3EC43BB0AD44022170D3F = {
+						LastSwiftMigration = 0830;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -342,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF1752B41F6292EB00B28828 /* ViewController.swift in Sources */,
 				E5ADEDCA10CA67DC4CBD32378C3EA5A7 /* Pods-Satuh_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -489,6 +506,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BA8865328B57CBC4943F03F20F299C40 /* Pods-Satuh_Example.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -528,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 80246F149F1218029BBE2AA454680801 /* Pods-Satuh_Example.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
