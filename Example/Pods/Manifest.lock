@@ -1,5 +1,5 @@
 PODS:
-  - Satuh (0.1.0)
+  - Satuh (0.2.0)
 
 DEPENDENCIES:
   - Satuh (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Satuh: 34d514c22b0e93f13ebc05744dd36275621db9c1
+  Satuh: fb5ba94997434c70a479b3cf4bcd9bf963eb2453
 
 PODFILE CHECKSUM: dc8d1cfb7ae4b6a6a8bd3c55c71e86e349c5d8e0
 
