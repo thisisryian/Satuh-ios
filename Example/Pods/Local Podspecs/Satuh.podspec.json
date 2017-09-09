@@ -1,22 +1,23 @@
 {
   "name": "Satuh",
-  "version": "0.1.0",
-  "summary": "A short description of Satuh.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Denny/Satuh",
+  "version": "0.2.0",
+  "summary": "Satuh for PMB apps.",
+  "description": "Satuh private lib for Pundi Mas Berjaya apps.",
+  "homepage": "https://github.com/Dennyong/Satuh",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Denny": "Denny@pmberjaya.com"
+    "Denny": "Denny"
   },
   "source": {
-    "git": "https://github.com/Denny/Satuh.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/Dennyong/Satuh.git",
+    "tag": "0.2.0"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "9.0"
   },
-  "source_files": "Satuh/Classes/**/*"
+  "source_files": "Satuh/Classes/**/*",
+  "frameworks": "UIKit"
 }

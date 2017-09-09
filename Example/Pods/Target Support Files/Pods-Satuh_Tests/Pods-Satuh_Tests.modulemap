@@ -1,6 +1,0 @@
-framework module Pods_Satuh_Tests {
-  umbrella header "Pods-Satuh_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

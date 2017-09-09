@@ -31,7 +31,7 @@
 		0D7EAC1F1CECF73581C6B263 /* Pods_Satuh_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Satuh_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A48E4EDD771EA9048B3FBFC /* Pods-Satuh_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satuh_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Satuh_Example/Pods-Satuh_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2A931D8407D988F00B609E96 /* Pods_Satuh_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Satuh_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		43D09B82105DB846D35B22F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		43D09B82105DB846D35B22F2 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* Satuh_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Satuh_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -42,11 +42,11 @@
 		607FACE51AFB9204008FA782 /* Satuh_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Satuh_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		7740A19F183F36A8F6EE42D3 /* Satuh.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = Satuh.podspec; path = ../Satuh.podspec; sourceTree = "<group>"; };
+		7740A19F183F36A8F6EE42D3 /* Satuh.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Satuh.podspec; path = ../Satuh.podspec; sourceTree = "<group>"; };
 		9944A56F112225607FF7F8CE /* Pods-Satuh_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satuh_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Satuh_Example/Pods-Satuh_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		A27C1F69999D3748C22950D2 /* Pods-Satuh_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satuh_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Satuh_Tests/Pods-Satuh_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		AB4D6F98B28E4E18CA88D24B /* Pods-Satuh_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Satuh_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Satuh_Tests/Pods-Satuh_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		BAAD71B9EEB6EED851081150 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		BAAD71B9EEB6EED851081150 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -496,7 +496,9 @@
 			baseConfigurationReference = 9944A56F112225607FF7F8CE /* Pods-Satuh_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Satuh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
@@ -510,7 +512,9 @@
 			baseConfigurationReference = 1A48E4EDD771EA9048B3FBFC /* Pods-Satuh_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = Satuh/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";

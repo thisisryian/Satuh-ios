@@ -1,6 +1,0 @@
-framework module Satuh {
-  umbrella header "Satuh-umbrella.h"
-
-  export *
-  module * { export * }
-}
