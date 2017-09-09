@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'Satuh'
   s.version          = '0.3.0'
-  s.summary          = 'Satuh for PMB apps.'
+  s.summary          = 'Lib for IOS apps.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
