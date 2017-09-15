@@ -8,11 +8,6 @@
 
 import UIKit
 
-public protocol SatuhDelegate: NSObjectProtocol {
-    
-    func satuh(didLogin: Bool, withUser user: SatuhUser?, error: Error?)
-}
-
 public struct SatuhUser {
     
     public var id: Int
@@ -36,25 +31,30 @@ public struct SatuhUser {
     }
 }
 
+public protocol SatuhDelegate: NSObjectProtocol {
+    
+    func satuh(didLogin: Bool, withUser user: SatuhUser?, error: Error?)
+}
+
 public class Satuh {
     static var controller = SatuhController()
     public static var delegate: SatuhDelegate!
     
-    public class var clientId: String {
+    public class var clientID: String {
         get {
-            return Satuh.controller.clientId
+            return Satuh.controller.clientID
         }
         set {
-            Satuh.controller.clientId = newValue
+            Satuh.controller.clientID = newValue
         }
     }
     
-    public class var directURI: String {
+    public class var redirectURI: String {
         get {
-            return Satuh.controller.directURI
+            return Satuh.controller.redirectURI
         }
         set {
-            Satuh.controller.directURI = newValue
+            Satuh.controller.redirectURI = newValue
         }
     }
     
@@ -63,8 +63,7 @@ public class Satuh {
         let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(self.dismiss(_:)))
         Satuh.controller.navigationItem.leftBarButtonItem = doneBtn
         
-        source.present(nav, animated: animated) {
-            completion?()
+        source.present(nav, animated: animated) { completion?()
             Satuh.controller.loginWithSatuh()
         }
     }
@@ -72,17 +71,16 @@ public class Satuh {
     @objc class func dismiss(_ sender: Any) {
         Satuh.controller.dismiss(animated: true, completion: nil)
     }
-    
 }
 
 class SatuhController: UIViewController {
     fileprivate var webController = UIWebView()
     
-    fileprivate var loginUrl: String = "http://192.168.100.100:81/oauth/authorize?"
-    fileprivate var loginViewUrl: String = "http://192.168.100.100:81/login"
+    fileprivate var loginUrl: String = "https://account.satuh.com/oauth/authorize?"
+    fileprivate var loginViewUrl: String = "https://account.satuh.com/login"
     
-    var clientId: String = ""
-    var directURI: String = ""
+    var clientID: String = ""
+    var redirectURI: String = ""
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -92,7 +90,7 @@ class SatuhController: UIViewController {
     }
     
     func loginWithSatuh() {
-        let url = URL(string: ("\(loginUrl)client_id=\(clientId)&redirect_url=http://192.168.100.100:81/response&response_type=token&scope="))
+        let url = URL(string: ("\(loginUrl)client_id=\(clientID)&redirect_uri=\(redirectURI)&response_type=token&scope="))
         webController.loadRequest(URLRequest(url: url!))
     }
     
@@ -118,16 +116,24 @@ extension SatuhController: UIWebViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         let currentUrl = webView.request?.url?.absoluteString
         
-        if currentUrl == "http://192.168.100.100:81/api/user" {
+        if currentUrl == "https://account.satuh.com/api/user" {
             guard let body = webView.stringByEvaluatingJavaScript(from: "document.body.innerHTML")?.replacingOccurrences(of: "<pre style=\"word-wrap: break-word; white-space: pre-wrap;\">", with: "").replacingOccurrences(of: "</pre>", with: ""), let result = convertToDictionary(text: body) else {
                 Satuh.delegate.satuh(didLogin: false, withUser: nil, error: nil)
-                // dismiss
+                
+                dismiss(animated: true, completion: {
+                    webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
+                })
+                
                 return
             }
             
             let user = SatuhUser(result)
             Satuh.delegate.satuh(didLogin: true, withUser: user, error: nil)
-            // dismiss
+            
+            dismiss(animated: true, completion: { 
+                webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
+            })
+            
             return
         }
         
@@ -144,14 +150,15 @@ extension SatuhController: UIWebViewDelegate {
                     }
                 }
                 
-                guard let url = URL(string: "http://192.168.100.100:81/api/user") else { return }
+                guard let url = URL(string: "https://account.satuh.com/api/user") else { return }
                 var headers: [String : String] = [:]
                 headers["Authorization"] = accessToken
-                headers["Content-Type"] = "application/json"
                 var request = URLRequest(url: url)
                 request.allHTTPHeaderFields = headers
                 webController.loadRequest(request)
-                // call loading
+                
+//                Loading Here
+                
                 return
             }
         }
@@ -159,7 +166,7 @@ extension SatuhController: UIWebViewDelegate {
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
         let currentUrl = webView.request?.url?.absoluteString
-        if currentUrl == "http://192.168.100.100:81/api/user" {
+        if currentUrl == "https://account.satuh.com/api/user" {
             Satuh.delegate.satuh(didLogin: false, withUser: nil, error: error)
         }
     }
