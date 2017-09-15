@@ -20,6 +20,7 @@ public struct SatuhUser {
     public var active: String
     
     init(_ data: [String : Any]) {
+        
         id = data["id"] as? Int ?? 0
         name = data["name"] as? String ?? ""
         email = data["email"] as? String ?? ""
@@ -37,7 +38,9 @@ public protocol SatuhDelegate: NSObjectProtocol {
 }
 
 public class Satuh {
+    
     static var controller = SatuhController()
+    
     public static var delegate: SatuhDelegate!
     
     public class var clientID: String {
@@ -74,6 +77,7 @@ public class Satuh {
 }
 
 class SatuhController: UIViewController {
+    
     fileprivate var webController = UIWebView()
     
     fileprivate var loginUrl: String = "https://account.satuh.com/oauth/authorize?"
@@ -84,17 +88,20 @@ class SatuhController: UIViewController {
     
     override public func viewDidLoad() {
         super.viewDidLoad()
+        
         view = webController
         
         webController.delegate = self
     }
     
     func loginWithSatuh() {
+        
         let url = URL(string: ("\(loginUrl)client_id=\(clientID)&redirect_uri=\(redirectURI)&response_type=token&scope="))
         webController.loadRequest(URLRequest(url: url!))
     }
     
     func convertToDictionary(text: String) -> [String: Any]? {
+        
         if let data = text.data(using: .utf8) {
             do {
                 return try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
@@ -109,18 +116,23 @@ class SatuhController: UIViewController {
 extension SatuhController: UIWebViewDelegate {
     
     func webViewDidStartLoad(_ webView: UIWebView) {
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
     func webViewDidFinishLoad(_ webView: UIWebView) {
+        
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
         let currentUrl = webView.request?.url?.absoluteString
         
         if currentUrl == "https://account.satuh.com/api/user" {
+            
             guard let body = webView.stringByEvaluatingJavaScript(from: "document.body.innerHTML")?.replacingOccurrences(of: "<pre style=\"word-wrap: break-word; white-space: pre-wrap;\">", with: "").replacingOccurrences(of: "</pre>", with: ""), let result = convertToDictionary(text: body) else {
+                
                 Satuh.delegate.satuh(didLogin: false, withUser: nil, error: nil)
                 
                 dismiss(animated: true, completion: {
+                    
                     webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
                 })
                 
@@ -138,12 +150,16 @@ extension SatuhController: UIWebViewDelegate {
         }
         
         if currentUrl != loginViewUrl {
+            
             var accessToken: String = ""
+            
             if (currentUrl!.contains("#access_token")) {
+                
                 let scanner = Scanner(string: currentUrl!)
                 var scanned: NSString?
                 
                 if scanner.scanUpTo("=", into: nil) {
+                    
                     scanner.scanString("=", into: nil)
                     if scanner.scanUpTo("&", into: &scanned) {
                         accessToken = "Bearer \(scanned! as String)"
@@ -165,8 +181,11 @@ extension SatuhController: UIWebViewDelegate {
     }
     
     func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
+        
         let currentUrl = webView.request?.url?.absoluteString
+        
         if currentUrl == "https://account.satuh.com/api/user" {
+            
             Satuh.delegate.satuh(didLogin: false, withUser: nil, error: error)
         }
     }
