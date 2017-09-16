@@ -72,7 +72,6 @@ public class Satuh {
     }
     
     public class func logoutSatuh() {
-        
         URLCache.shared.removeAllCachedResponses()
         URLCache.shared.diskCapacity = 0
         URLCache.shared.memoryCapacity = 0
