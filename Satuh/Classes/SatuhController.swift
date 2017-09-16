@@ -71,6 +71,19 @@ public class Satuh {
         }
     }
     
+    public class func logoutSatuh() {
+        
+        URLCache.shared.removeAllCachedResponses()
+        URLCache.shared.diskCapacity = 0
+        URLCache.shared.memoryCapacity = 0
+        
+        if let cookies = HTTPCookieStorage.shared.cookies {
+            for cookie in cookies {
+                HTTPCookieStorage.shared.deleteCookie(cookie)
+            }
+        }
+    }
+    
     @objc class func dismiss(_ sender: Any) {
         Satuh.controller.dismiss(animated: true, completion: nil)
     }
@@ -131,10 +144,9 @@ extension SatuhController: UIWebViewDelegate {
                 
                 Satuh.delegate.satuh(didLogin: false, withUser: nil, error: nil)
                 
-                dismiss(animated: true, completion: {
-                    
-                    webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
-                })
+                webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
+                
+                dismiss(animated: true, completion: nil)
                 
                 return
             }
@@ -142,9 +154,9 @@ extension SatuhController: UIWebViewDelegate {
             let user = SatuhUser(result)
             Satuh.delegate.satuh(didLogin: true, withUser: user, error: nil)
             
-            dismiss(animated: true, completion: { 
-                webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
-            })
+            webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
+            
+            dismiss(animated: true, completion: nil)
             
             return
         }
