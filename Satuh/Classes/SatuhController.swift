@@ -43,6 +43,8 @@ public class Satuh {
     
     public static var delegate: SatuhDelegate!
     
+    public static var accessToken: String!
+    
     public class var clientID: String {
         get {
             return Satuh.controller.clientID
@@ -162,8 +164,6 @@ extension SatuhController: UIWebViewDelegate {
         
         if currentUrl != loginViewUrl {
             
-            var accessToken: String = ""
-            
             if (currentUrl!.contains("#access_token")) {
                 
                 let scanner = Scanner(string: currentUrl!)
@@ -173,13 +173,14 @@ extension SatuhController: UIWebViewDelegate {
                     
                     scanner.scanString("=", into: nil)
                     if scanner.scanUpTo("&", into: &scanned) {
-                        accessToken = "Bearer \(scanned! as String)"
+//                        accessToken = "Bearer \(scanned! as String)"
+                        Satuh.accessToken = "Bearer \(scanned! as String)"
                     }
                 }
                 
                 guard let url = URL(string: "https://account.satuh.com/api/user") else { return }
                 var headers: [String : String] = [:]
-                headers["Authorization"] = accessToken
+                headers["Authorization"] = Satuh.accessToken
                 var request = URLRequest(url: url)
                 request.allHTTPHeaderFields = headers
                 webController.loadRequest(request)
