@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Satuh'
-  s.version          = '1.2.1'
+  s.version          = '1.2.2'
   s.summary          = 'Lib for IOS apps.'
 
 # This description is used to generate tags and improve search results.
@@ -21,11 +21,11 @@ Pod::Spec.new do |s|
 Satuh private lib for Pundi Mas Berjaya apps.
                        DESC
 
-  s.homepage         = 'https://github.com/Dennyong/Satuh'
+  s.homepage         = 'https://github.com/pmberjaya/Satuh-ios'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Denny' => 'Denny' }
-  s.source           = { :git => 'https://github.com/Dennyong/Satuh.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/pmberjaya/Satuh-ios', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '9.0'

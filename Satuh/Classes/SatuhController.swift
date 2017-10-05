@@ -173,7 +173,6 @@ extension SatuhController: UIWebViewDelegate {
                     
                     scanner.scanString("=", into: nil)
                     if scanner.scanUpTo("&", into: &scanned) {
-//                        accessToken = "Bearer \(scanned! as String)"
                         Satuh.accessToken = "Bearer \(scanned! as String)"
                     }
                 }
@@ -184,8 +183,6 @@ extension SatuhController: UIWebViewDelegate {
                 var request = URLRequest(url: url)
                 request.allHTTPHeaderFields = headers
                 webController.loadRequest(request)
-                
-//                Loading Here
                 
                 return
             }
