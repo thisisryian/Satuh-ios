@@ -134,39 +134,15 @@ extension SatuhController: UIWebViewDelegate {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
-        UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        let currentUrl = webView.request?.url?.absoluteString
-        
-        if currentUrl == "https://account.satuh.com/api/user" {
-            
-            guard let body = webView.stringByEvaluatingJavaScript(from: "document.body.innerHTML")?.replacingOccurrences(of: "<pre style=\"word-wrap: break-word; white-space: pre-wrap;\">", with: "").replacingOccurrences(of: "</pre>", with: ""), let result = convertToDictionary(text: body) else {
-                
-                Satuh.delegate.satuh(didLogin: false, withUser: nil, error: nil)
-                
-                webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
-                
-                dismiss(animated: true, completion: nil)
-                
-                return
-            }
-            
-            let user = SatuhUser(result)
-            Satuh.delegate.satuh(didLogin: true, withUser: user, error: nil)
-            
-            webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
-            
-            dismiss(animated: true, completion: nil)
-            
-            return
-        }
+        let currentUrl = request.url?.absoluteString ?? ""
         
         if currentUrl != loginViewUrl {
             
-            if (currentUrl!.contains("#access_token")) {
+            if (currentUrl.contains("#access_token")) {
                 
-                let scanner = Scanner(string: currentUrl!)
+                let scanner = Scanner(string: currentUrl)
                 var scanned: NSString?
                 
                 if scanner.scanUpTo("=", into: nil) {
@@ -174,18 +150,42 @@ extension SatuhController: UIWebViewDelegate {
                     scanner.scanString("=", into: nil)
                     if scanner.scanUpTo("&", into: &scanned) {
                         Satuh.accessToken = "Bearer \(scanned! as String)"
+                        dismiss(animated: true, completion: nil)
                     }
                 }
                 
-                guard let url = URL(string: "https://account.satuh.com/api/user") else { return }
+                guard let url = URL(string: "https://account.satuh.com/api/user") else { return true }
                 var headers: [String : String] = [:]
                 headers["Authorization"] = Satuh.accessToken
                 var request = URLRequest(url: url)
                 request.allHTTPHeaderFields = headers
                 webController.loadRequest(request)
                 
-                return
+                return true
             }
+        }
+        
+        return true
+    }
+    
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        
+        UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        let currentUrl = webView.request?.url?.absoluteString
+        
+        if currentUrl == "https://account.satuh.com/api/user" {
+            
+            let body = webView.stringByEvaluatingJavaScript(from: "document.body.innerHTML")?.replacingOccurrences(of: "<pre style=\"word-wrap: break-word; white-space: pre-wrap;\">", with: "").replacingOccurrences(of: "</pre>", with: "")
+            
+            let result = convertToDictionary(text: body!)
+            let user = SatuhUser(result!)
+            Satuh.delegate.satuh(didLogin: true, withUser: user, error: nil)
+            
+            webView.loadRequest(URLRequest(url: URL(string: "about:blank")!))
+            
+            dismiss(animated: true, completion: nil)
+            
+            return
         }
     }
     

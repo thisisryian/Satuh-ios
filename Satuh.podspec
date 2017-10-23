@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'Satuh'
-  s.version          = '1.2.2'
-  s.summary          = 'Lib for IOS apps.'
+  s.version          = '1.3.0'
+  s.summary          = 'lib for ios apps.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Satuh private lib for Pundi Mas Berjaya apps.
+Satuh lib for ios apps.
                        DESC
 
   s.homepage         = 'https://github.com/pmberjaya/Satuh-ios.git'
