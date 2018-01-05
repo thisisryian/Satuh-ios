@@ -9,7 +9,7 @@
     "file": "LICENSE"
   },
   "authors": {
-    "Denny": "Denny"
+    "pmberjaya": "Satuh"
   },
   "source": {
     "git": "https://github.com/pmberjaya/Satuh-ios.git",
@@ -21,7 +21,7 @@
   "source_files": "Satuh/Classes/**/*",
   "frameworks": "UIKit",
   "dependencies": {
-    "PMBFramework": [
+    "SnapKit": [
 
     ]
   }

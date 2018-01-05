@@ -1,6 +1,6 @@
 //
 //  SatuhLoadingView.swift
-//  Alamofire
+//  Pods-Satuh_Example
 //
 //  Created by Denny Ong on 1/5/18.
 //
