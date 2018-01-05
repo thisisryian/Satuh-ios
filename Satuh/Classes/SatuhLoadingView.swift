@@ -10,15 +10,13 @@ import PMBFramework
 
 class SatuhLoadingView: UIView {
     
-    let backgroundView = UIView()
-    let activity = UIActivityIndicatorView()
+    let activityIndicator = UIActivityIndicatorView()
     
     init() {
         super.init(frame: CGRect())
-        backgroundColor = .gray
+        backgroundColor = UIColor.black.alpha(0.5)
         
-        backgroundView.addSubview(activity)
-        addSubview(backgroundView)
+        addSubview(activityIndicator)
         
         setupConstraint()
         setupView()
@@ -30,15 +28,18 @@ class SatuhLoadingView: UIView {
     
     func setupView() {
         
+        activityIndicator.activityIndicatorViewStyle = .whiteLarge
+        activityIndicator.startAnimating()
     }
     
     func setupConstraint() {
-        
-        
+
+        activityIndicator.snp.makeConstraints { (make) in
+            make.center.equalTo(self)
+        }
         
         setNeedsLayout()
         layoutIfNeeded()
         
     }
-
 }

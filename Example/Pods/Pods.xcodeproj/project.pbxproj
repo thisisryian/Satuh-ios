@@ -477,7 +477,7 @@
 		DF049C10FEA1837AF045D4E369F3E6A3 /* KVORepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF6003346ACEF2D33BD6D88C139B2C47 /* KVORepresentable.swift */; };
 		DF28A0EB6D7BB9CC7282DDF7B2311231 /* RxTabBarDelegateProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED6E9B4595B4F0F769B66873221300C /* RxTabBarDelegateProxy.swift */; };
 		DF4D05B2FFD4DFFCD17243D15D9B13C3 /* RecursiveLock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60EB34CD3C8F1DF64DE0B8B0D332668D /* RecursiveLock.swift */; };
-		DF63C6A71FFF26D00006B115 /* SatuhLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63C6A61FFF26D00006B115 /* SatuhLoadingView.swift */; };
+		DF63C6A81FFF2F590006B115 /* SatuhLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF63C6A61FFF26D00006B115 /* SatuhLoadingView.swift */; };
 		E00AE0D8804D9BF24FFF678FEE35FDF4 /* RxTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ADC87B2FAE9C1CF4CC057DE18AC251B /* RxTarget.swift */; };
 		E0BFEC37D858F90F5A6CCEA1399B907C /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63177F5727BDE59196222FEB7AE33D8F /* RxSwift.framework */; };
 		E0DC63E3FEA808360D265AC495098144 /* String+MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DC8C21A768C5238879F4F2C7F69F14 /* String+MD5.swift */; };
@@ -3152,7 +3152,6 @@
 				B65FCF589DA398C3EFE0128064E510EC /* MultipartFormData.swift in Sources */,
 				A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */,
 				EFD264FC408EBF3BA2528E70B08DDD94 /* Notifications.swift in Sources */,
-				DF63C6A71FFF26D00006B115 /* SatuhLoadingView.swift in Sources */,
 				BE5C67A07E289FE1F9BE27335B159997 /* ParameterEncoding.swift in Sources */,
 				5387216E723A3C68E851CA15573CDD71 /* Request.swift in Sources */,
 				CB6D60925223897FFA2662667DF83E8A /* Response.swift in Sources */,
@@ -3203,6 +3202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF63C6A81FFF2F590006B115 /* SatuhLoadingView.swift in Sources */,
 				0C7268D9EA52706CF85E517C8D439690 /* Satuh-dummy.m in Sources */,
 				B2D3FD39EE3619E81A7BE99F52821D65 /* SatuhController.swift in Sources */,
 			);

@@ -132,6 +132,7 @@ extension SatuhController: UIWebViewDelegate {
     func webViewDidStartLoad(_ webView: UIWebView) {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
+        webController.addSubview(SatuhLoadingView())
     }
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
@@ -171,6 +172,8 @@ extension SatuhController: UIWebViewDelegate {
     func webViewDidFinishLoad(_ webView: UIWebView) {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = false
+        SatuhLoadingView().removeFromSuperview()
+        
         let currentUrl = webView.request?.url?.absoluteString
         
         if currentUrl == "https://account.satuh.com/api/user" {
