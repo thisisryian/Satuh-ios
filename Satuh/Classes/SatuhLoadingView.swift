@@ -17,7 +17,6 @@ class SatuhLoadingView: UIView {
         backgroundColor = UIColor.black.alpha(0.5)
         
         addSubview(activityIndicator)
-        
         setupConstraint()
         setupView()
     }
@@ -27,7 +26,6 @@ class SatuhLoadingView: UIView {
     }
     
     func setupView() {
-        
         activityIndicator.activityIndicatorViewStyle = .whiteLarge
         activityIndicator.startAnimating()
     }
@@ -37,9 +35,7 @@ class SatuhLoadingView: UIView {
         activityIndicator.snp.makeConstraints { (make) in
             make.center.equalTo(self)
         }
-        
         setNeedsLayout()
         layoutIfNeeded()
-        
     }
 }
