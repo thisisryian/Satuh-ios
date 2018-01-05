@@ -21,7 +21,7 @@ PODS:
     - RxCocoa (~> 4.0)
     - RxSwift (~> 4.0)
   - RxSwift (4.1.0)
-  - Satuh (1.3.0):
+  - Satuh (2.0.0):
     - PMBFramework
   - SnapKit (4.0.0)
   - SwiftDate (4.5.1)
@@ -44,7 +44,7 @@ SPEC CHECKSUMS:
   RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
   RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
   RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
-  Satuh: 6f58fe02c1b09f1b4d915193e60ce49a89d3b6dd
+  Satuh: 86950c3678e424536f2a1c15c4330f5ad75362db
   SnapKit: a42d492c16e80209130a3379f73596c3454b7694
   SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
   SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
