@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import PMBFramework
+import SnapKit
 
 class SatuhLoadingView: UIView {
     
@@ -14,7 +14,7 @@ class SatuhLoadingView: UIView {
     
     init() {
         super.init(frame: CGRect())
-        backgroundColor = UIColor.black.alpha(0.5)
+        backgroundColor = UIColor.black.withAlphaComponent(0.5)
         
         addSubview(activityIndicator)
         setupConstraint()
@@ -35,6 +35,7 @@ class SatuhLoadingView: UIView {
         activityIndicator.snp.makeConstraints { (make) in
             make.center.equalTo(self)
         }
+        
         setNeedsLayout()
         layoutIfNeeded()
     }

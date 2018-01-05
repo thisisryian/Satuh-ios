@@ -38,6 +38,5 @@ Satuh lib for ios apps.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
     s.frameworks = 'UIKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-    s.dependency 'PMBFramework'
+    s.dependency 'SnapKit'
 end
