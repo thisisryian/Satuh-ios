@@ -24,7 +24,7 @@ Satuh lib for ios apps.
   s.homepage         = 'https://github.com/pmberjaya/Satuh-ios.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Denny' => 'Denny' }
+  s.author           = { 'pmberjaya' => 'Satuh' }
   s.source           = { :git => 'https://github.com/pmberjaya/Satuh-ios.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 

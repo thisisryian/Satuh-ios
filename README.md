@@ -22,7 +22,7 @@ pod 'Satuh'
 
 ## Author
 
-Denny, Denny@pmberjaya.com
+pmberjaya, Satuh
 
 ## License
 

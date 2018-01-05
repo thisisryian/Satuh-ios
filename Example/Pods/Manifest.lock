@@ -1,5 +1,31 @@
 PODS:
-  - Satuh (0.3.0)
+  - Alamofire (4.6.0)
+  - Differentiator (3.0.2)
+  - Kingfisher (4.6.1)
+  - Localize-Swift (2.0.0)
+  - PMBFramework (2.0.3):
+    - Alamofire
+    - Kingfisher
+    - Localize-Swift
+    - RappleProgressHUD
+    - RxDataSources
+    - RxSwift
+    - SnapKit
+    - SwiftDate
+    - SwiftyJSON
+  - RappleProgressHUD (2.4.1)
+  - RxCocoa (4.1.0):
+    - RxSwift (~> 4.0)
+  - RxDataSources (3.0.2):
+    - Differentiator (~> 3.0)
+    - RxCocoa (~> 4.0)
+    - RxSwift (~> 4.0)
+  - RxSwift (4.1.0)
+  - Satuh (1.3.0):
+    - PMBFramework
+  - SnapKit (4.0.0)
+  - SwiftDate (4.5.1)
+  - SwiftyJSON (4.0.0)
 
 DEPENDENCIES:
   - Satuh (from `../`)
@@ -9,7 +35,19 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  Satuh: 7c2bacf75df8fec2b4224f40a5a8cbea8350e306
+  Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
+  Differentiator: a87be69eba49ec4ab460c7671143ee3a9eececfd
+  Kingfisher: 1f9157d9c02b380cbd0b7cc890161195164eb634
+  Localize-Swift: c798ec9286494866f7068f85f7c71283ac5bdab4
+  PMBFramework: e7c3648d0da45ee2b29adbccb7c3c4a745395f69
+  RappleProgressHUD: 1d97178abc04ea9e89e4df74227064ded389ce24
+  RxCocoa: cc1fec49cdc8fabe645964de7c51c099a36c2aa8
+  RxDataSources: cb7c31e652a87ebb919da45f716bbb87b3765f6b
+  RxSwift: 4219941c1244c88002901bd87a69d3aea9ae71f0
+  Satuh: fa19217634a24bfd745aa495ee72f7d524da38bd
+  SnapKit: a42d492c16e80209130a3379f73596c3454b7694
+  SwiftDate: 7b56d42a221f582047287deb256b23fc5ed49a60
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
 
 PODFILE CHECKSUM: 4f9dbd757623cd3e32ea414857cd2b7d16d7178c
 
